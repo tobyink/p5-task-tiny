@@ -1,0 +1,58 @@
+# This file provides instructions for packaging.
+
+@prefix : <http://ontologi.es/doap-deps#>.
+
+`Task-Tiny`
+	:test-requirement       [ :on "Test::More 0.96"^^:CpanId ];
+	:develop-recommendation [ :on "Dist::Inkt 0.001"^^:CpanId ];
+	:feature [
+		doap:name               "Util";
+		doap:shortdesc          "General utilities";
+		:runtime-requirement    [ :on "Exporter::Tiny"^^:CpanId ];
+		:runtime-requirement    [ :on "Try::Tiny"^^:CpanId ];
+		:runtime-recommendation [ :on "Config::Tiny"^^:CpanId ];
+		:x_default              true;
+	];
+	:feature [
+		doap:name               "Objects";
+		doap:shortdesc          "Framework for OO programming";
+		:runtime-requirement    [ :on "Class::Tiny"^^:CpanId ];
+		:runtime-requirement    [ :on "Class::Tiny::Antlers"^^:CpanId ];
+		:runtime-requirement    [ :on "Role::Tiny"^^:CpanId ];
+		:runtime-recommendation [ :on "Class::Method::Modifiers"^^:CpanId ];
+		:x_default              true;
+	];
+	:feature [
+		doap:name               "Types";
+		doap:shortdesc          "Type constraint framework";
+		:runtime-requirement    [ :on "Type::Tiny"^^:CpanId ];
+		:runtime-recommendation [ :on "Types::Path::Tiny"^^:CpanId ];
+		:x_default              true;
+	];
+	:feature [
+		doap:name               "Filesys";
+		doap:shortdesc          "File system manipulation";
+		:runtime-requirement    [ :on "Path::Tiny"^^:CpanId ];
+		:runtime-recommendation [ :on "Types::Path::Tiny"^^:CpanId ];
+		:x_default              true;
+	];
+	:feature [
+		doap:name               "HTTP";
+		doap:shortdesc          "Web stuff";
+		:runtime-requirement    [ :on "HTTP::Tiny"^^:CpanId ];
+		:x_default              true;
+	];
+	:feature [
+		doap:name               "JSON";
+		doap:shortdesc          "JSON stuff";
+		:runtime-requirement    [ :on "JSON::PP"^^:CpanId ];
+		:x_default              true;
+	];
+	:feature [
+		doap:name               "YAML";
+		doap:shortdesc          "YAML stuff";
+		:runtime-requirement    [ :on "YAML::Tiny"^^:CpanId ];
+		:x_default              false;
+	];
+	.
+
