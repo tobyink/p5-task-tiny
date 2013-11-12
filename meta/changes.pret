@@ -4,3 +4,8 @@
 	issued  2013-10-20;
 	label   "Initial release".
 
+`Task-Tiny 0.002 cpan:TOBYINK`
+	issued  2013-11-12;
+	changeset [
+		item "Document which modules are included."^^Documentation;
+	].
